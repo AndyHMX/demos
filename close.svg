@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hamburger menu - wistia style (close)</title>
+    <g id="SBS-player---Swiper-framework" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.495442708">
+        <g id="Desktop---menu-open-at-start" transform="translate(-1053.000000, -493.000000)" fill="#444444">
+            <g id="hamburger-menu---wistia-style-(close)" transform="translate(1049.000000, 491.000000)">
+                <rect id="Rectangle" transform="translate(17.500000, 15.500000) rotate(45.000000) translate(-17.500000, -15.500000) " x="0" y="14" width="35" height="3" rx="1"></rect>
+                <rect id="Rectangle-Copy" transform="translate(17.500000, 15.500000) rotate(-45.000000) translate(-17.500000, -15.500000) " x="0" y="14" width="35" height="3" rx="1"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
