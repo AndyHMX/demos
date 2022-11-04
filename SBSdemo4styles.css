@@ -1,0 +1,562 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+  
+  font-size:16px;
+}
+
+body {
+  
+ 
+  padding:2rem;
+  min-width:350px;
+}
+
+.notes {
+  
+  font-family:avenir;
+  max-width:64rem;
+  
+}
+
+h1, h2, label, p {
+  
+   font-family:avenir;
+  
+}
+
+label {
+  
+  margin:0;
+
+}
+
+p {
+  
+  margin:1rem 2rem;
+  
+}
+
+li {
+  
+  margin:1rem auto 0;
+  
+}
+#container {
+  margin:3rem auto 1rem;
+  display:block;
+ position:relative;
+  max-width: 815px; /* max-width of LMS content area */
+ 
+ 
+  background:white;
+  transition: 1s;
+transform-origin: center;
+  
+}
+
+
+
+#LMShead {
+  
+  padding:1rem;
+  margin:1rem;
+  display:block;
+
+ 
+}
+
+#LMSlower {
+  
+  margin-top:5rem;
+}
+
+
+
+.tagged {
+	
+	visibility:hidden !important;
+	
+}
+
+
+#content {
+   max-width:815px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  font-family:avenir;
+
+  font-size:1rem;
+  color:#fff;
+  text-align:center;
+ background-color: #fff;
+
+background-size:cover;
+  background-image:url('https://github.com/AndyHMX/demos/blob/main/20.png?raw=true');
+  position:relative;
+  
+  
+}
+
+#menucontrols {
+	
+	display:inherit;
+}
+
+#menucontrols  button {
+
+ background:none;
+border:0;
+margin:0;
+padding:0;
+height:38px;
+width:40px;
+}
+
+
+#menucontrols  button img{
+
+margin:0  !important;
+padding:0 !important;
+	
+}
+
+#menucontrols  button:hover {
+	
+	background-color:rgba(0,0,0,.2) !important;
+}
+
+#menucontrols  button:hover img {
+	
+	opacity:1 !important;
+}
+
+
+
+
+#menucontrols  button:active  img {
+	
+	transform: scale(1.2);
+}
+
+
+
+#fullscreenbtn {
+	
+
+}
+         
+
+
+#menu::before {
+  content:"X";
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  font-size:1rem;
+  color:#000;
+  font-weight:400;
+}
+
+
+#label {
+  
+  background:#000;
+  padding:1rem 2rem 3rem;
+  position:absolute;
+  
+}
+
+li button {
+	
+	 border-radius: 0.25rem;
+}
+
+li button:focus {
+  
+  
+  outline-style: none;
+
+  box-shadow: inset 0 0 0 2px #2D3091;	
+	
+}
+
+li button.darkUI:focus {
+	
+	box-shadow: inset 0 0 0 2px #6163AC;	
+	
+}
+
+
+#menu {
+  
+  background-color:rgba(255, 255, 255, 0.8);
+
+  display:flex;
+  width:94.25%;
+  height:89.5%;
+  position:absolute;
+  border-radius:0.5rem;
+  -webkit-box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.5); 
+box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.5);
+ 
+  
+  align-items: center;
+  justify-content: center;
+  
+backdrop-filter: blur(2px);
+  
+}
+
+#SBS_btn {
+ 
+position:absolute;
+margin-top:1.5rem;
+background-color:#00847C;
+border:0;
+  color:#fff;
+  padding:0.5rem;
+  border-radius:0.25rem;
+  min-width:5rem;
+  text-transform:uppercase;
+  font-family:avenir;
+
+}
+
+#playerUIcontainer {
+	
+	
+}
+
+#menucontrols img{
+  
+ padding:0 0.25rem;
+ margin:0 0 2px 0;
+opacity: 0.8;
+  
+}
+
+
+
+#lockup {
+  
+	padding:0 0.25rem;
+	margin-left:0.4rem;
+
+}
+
+
+
+#steps {
+  
+
+  height:3.5rem;
+
+	flex-grow: 4;
+  
+}
+
+
+
+
+#playerUI {
+  
+  height:36px;
+  background-color:#727167 !important;
+  width:100%;
+  border-bottom:1px solid #eeeeee; background:rgba(255,255,255,0.7);
+  position:absolute;
+  bottom:-35px;
+  left:0;
+  text-align:center;
+  color:#000;
+  font-family:avenir;
+  font-size:1.8rem;
+  box-sizing:border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0;
+  repeat:no-repeat;
+  overflow:hidden;
+
+	
+	
+}
+
+#playerUI img {
+	
+	visability: visible !important;
+}
+
+
+.fade {
+    -webkit-mask-image: linear-gradient(90deg, #000 100%, transparent);
+  }
+
+select {
+	
+	   
+	  
+	
+}
+
+#setSteps {
+	
+	padding:0.5rem;
+	margin:0;
+}
+
+#infinateSteps {
+	
+	
+	height: 1.85rem;
+    background: transparent;
+    color: #333;
+    border: 1px solid #333;
+    margin: 0;
+    padding: 0;
+    font-size: 0.95rem;
+	font-weight:400;
+    border-radius: 0.25rem;
+	font-family: avenir, sans-serif;
+	display:none;
+	
+	
+}
+
+
+
+
+.switchStepBtn{
+	
+	padding:0 0.5rem;
+	color:#fff;
+	font-size:1.5rem;
+	margin:1px 0 0 0;
+	border-radius: 0.175rem;
+	border:0;
+    background:none;
+	height:0%;
+
+	
+	
+}
+
+.switchStepBtn:focus {
+	
+	
+   
+	
+}
+
+.switchStepBtn.darkUI:focus {
+	
+	
+    box-shadow:  0 0 0 2px #6163AC, inset 0 0 0 1px #000;
+	
+}
+
+
+li.active button, #playerUI ul li.active button.lightUI:hover {
+	
+
+	color: #fff !important;
+    transition: color 300ms linear;
+	transition: background 300ms linear;
+    border-radius: 0.25rem;
+	background: #2D3091 !important;
+	border-radius: 0.25rem; 
+	
+}
+
+
+
+
+#playerUI ul {
+  
+ margin:0; 
+ padding:0;
+  overflow:hidden;
+ height: 100%;
+  display:inline;
+
+ /* white-space:nowrap; */
+
+ 
+}
+
+#playerUI ul li {
+  
+  display:inline;
+  font-weight:400;
+  margin:0;
+  
+  
+}
+
+#playerUI ul li button {
+  
+  background:none;
+  border:none;
+ 
+  margin:0;
+  padding:0;
+  vertical-align: middle;
+  line-height: 0;
+  font-weight:400;
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  font-family: 'avenir', sans-serif;
+  height:100%
+
+	
+}
+
+#playerUI ul li button:hover {
+  
+ /* background:rgba(255,255,255,0.4);*/
+  border-radius:0.25rem;
+  cursor: pointer;
+
+}
+
+
+
+
+
+#playerUI ul li button.lightUI {
+	
+	color:#CAC7C2;
+  font-size:1.8rem;
+}
+
+#playerUI ul li button.lightUI:hover {
+	
+	color:#919190 !important;
+	
+}
+
+
+
+
+#playerUI ul li button:active {
+    transform: scale(1.1);
+	box-shadow: none;
+}
+
+#playerUI #bullets {
+	
+	display: none;
+
+}
+
+#playerUI #numbers {
+	
+	display:inline-block;
+	margin-top:5.5px;
+
+}
+
+#playerUI #bullets li button {
+	
+	font-size:1.8rem;
+	padding: 0 0.5rem;
+}
+
+#playerUI #numbers li button{
+	
+	font-size:1rem;
+	padding: 0 0.5rem;
+	color: #fff;
+	height:1.5rem;
+    transform: none !important;
+
+}
+
+#playerUI #numbers li button:hover{
+	
+	background: rgba(255,255,255,0.20);
+	border-radius: 0.25rem;
+	color:#fff !important;
+
+}
+
+#controls {
+  
+  background:#d4d4d4;
+  padding:3rem;
+  margin: 1rem auto;
+vertical-align: middle;
+  
+}
+
+ #controls div{
+    
+    display:inline;
+	padding:0;
+	margin:0 2rem 0.5rem 0;
+	white-space: nowrap;
+  }
+
+#controls div.break {
+	
+	display:block;
+	margin:1rem 0 0 0;
+}
+
+.fa, .fas {
+	
+	vertical-align: middle;
+}
+
+.LMScontent {
+  
+  display:block;
+  font-family:avenir;
+}
+  
+
+@media screen and (max-width: 500px) {
+  
+#playerUI {
+
+  bottom:-3.5rem !important;
+  font-size:0.8rem;
+  
+}
+  
+	#controls {
+		
+		padding:2rem 1rem;
+	}
+  
+ #controls div{
+    
+    display:block;
+	
+  
+  }
+  
+ 
+}
+
+
+@media screen and (min-width: 500px) {
+  
+#container {
+
+  
+transform: rotate(0deg) !important;
+
+  
+}
+  
+  .LMScontent {
+    display:block !important;
+    
+  }
+  
+  
+}

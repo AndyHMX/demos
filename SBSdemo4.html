@@ -1,0 +1,387 @@
+
+
+<html>
+<head>
+   <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+	
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+<link href="SBSdemo4styles.css" rel="stylesheet" type="text/css" media="screen">
+<script src="https://kit.fontawesome.com/2d49eff31d.js" crossorigin="anonymous"></script>
+	
+	 
+
+  </head>
+  
+<body>
+
+	
+	
+
+<h1>SBS UI</h1>
+
+
+  <!--- SBS demo --->
+  
+  
+<div id="container">
+
+ <div id="content">
+ <div id="menu">
+  <button id="SBS_btn" class="notActive">Start</button>-->
+   </div>
+   <img src="https://via.placeholder.com/720x405.png?text=SBS content is 16:9" style="visibility: hidden"/>
+  <div id="playerUIcontainer">
+  <div id="playerUI">
+    <div id="lockup">
+      
+      
+      <img src="assets/HMX_wordmark.svg">
+      
+    </div>
+    <div id="steps">
+		
+	
+ 
+    
+			
+			<ul id="bullets">
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+      <li><button class="slidechange">&#x2022;</button></li>
+     
+      
+    </ul>
+			
+			 <ul id="numbers">
+				    <button class="switchStepBtn slidechange" id="previous"><i class="fa fa-solid fa-chevron-left"></i></button>
+      <li><button class="slidechange">1</button></li>
+      <li><button class="slidechange">2</button></li>
+      <li><button class="slidechange">3</button></li>
+      <li><button class="slidechange">4</button></li>
+      <li><button class="slidechange">5</button></li>
+      <li><button class="slidechange">6</button></li>
+      <li><button class="slidechange">7</button></li>
+      <li><button class="slidechange">8</button></li>
+      <li><button class="slidechange">9</button></li>
+      <li><button class="slidechange">10</button></li>
+				 	  <button class="switchStepBtn slidechange" id="next"><i class="fa fa-solid fa-chevron-right"></i></button>
+     
+      
+    </ul>
+	  
+	<!--  <select id="infinateSteps"></select> -->
+	  
+	 
+	    
+
+</div>
+		
+	       <div id="menucontrols">
+		   
+         
+ <button id ="homebtn"><img src="assets/home.svg"></button>
+         
+ <button id ="menubtn"><img src="assets/menu.svg"></button>
+         
+ <button id ="fullscreenbtn"> <img src="assets/fullscreen.svg"> </button>
+         
+         
+       </div>	
+		
+		
+		
+    </div>
+	  
+	  
+	  
+
+
+    
+    
+  </div>
+  </div>
+  </div>
+	
+
+
+  
+</body>
+	
+	
+	
+<script>	
+	
+	
+	
+	 $('#steps').css('visibility','hidden');
+	
+		function menubtnActive() {
+		
+	
+  if ( $('#menu').css('display') == 'flex' )
+	  
+    $('#menubtn').css('background-color','rgba(0,0,0,.4)');
+
+
+			
+else
+   $('#menubtn').css('background-color','transparent');	
+			
+			
+			
+			
+	
+ if ( $('#menu').css('display') == 'flex' )
+	  
+
+	
+    $('#menubtn img').css('opacity','1');
+
+			
+else
+  $('#menubtn img').css('opacity','0.8');
+		
+	
+					
+}
+	
+	
+	$(function()
+    {
+      $('[name="bulletedPagination"]').change(function()
+      {
+        
+		  
+		  if ($("#bulletedPagination").is(':checked')) {
+			  
+			 $("#bullets").css("display","inline");
+			  $("#numbers").css("display","none");
+			  
+		  }
+		
+		  else {
+			  
+			$("#bullets").css("display","none");
+			  $("#numbers").css("display","inline");
+			
+  
+			  
+		  }
+    });
+	});
+	
+		
+		
+	
+
+
+
+	menubtnActive();
+	
+
+		
+	
+
+
+
+
+	
+	
+
+	  
+ $('#menubtn').on( "click", function() {
+
+   $('#menu').toggle();
+
+	 menubtnActive()
+	
+
+	 if ( $('#steps').css('visibility') == 'hidden' )
+    $('#steps').css('visibility','visible');
+  else
+   $('#steps').css('visibility','hidden');
+
+	  });	
+
+		  
+		  
+		  
+	
+
+  
+ $('#SBS_btn').on( "click", function() {
+
+   $('#menu').css("display","none");
+   $('#menubtn').css('background-color','transparent');	
+		
+	 
+ if ( $('#steps').css('visibility') == 'hidden' )
+    $('#steps').css('visibility','visible');
+  else
+   $('#steps').css('visibility','hidden');
+	 
+	 
+
+		
+
+
+
+	 
+   
+ if( $(this).hasClass('notActive') )
+  $(this).remove();
+ 
+    
+else
+  $(this).text('Start'); 
+   
+if( $(this).hasClass('notActive') ){
+   
+    $('#label').css('padding','1rem');
+
+	
+	$("#playerUI ul li").first().addClass("active");
+	
+}
+   
+ else
+    $('#label').text('SBS start screen');
+
+$(this).toggleClass('notActive');
+   
+
+  
+   
+});
+
+	
+
+
+$('.slidechange').click(function () {
+
+var bgNum = Math.floor(Math.random() * 8);
+var bg;
+var imagebg;
+switch (bgNum) {
+    case 1:
+        bg = 'https://github.com/AndyHMX/demos/blob/main/1.png?raw=true';
+        break;
+    case 2:
+        bg = 'https://github.com/AndyHMX/demos/blob/main/11.png?raw=true';
+        break;
+    case 3:
+        bg = 'https://github.com/AndyHMX/demos/blob/main/15.png?raw=true';
+        break;
+    case 4:
+        bg = 'https://github.com/AndyHMX/demos/blob/main/7.png?raw=true';
+        break;
+    case 5:
+        bg = 'https://github.com/AndyHMX/demos/blob/main/9.png?raw=true';
+        break;
+    case 6:
+        bg = 'https://github.com/AndyHMX/demos/blob/main/19.png?raw=true';
+        break;
+    case 7:
+        bg = 'https://github.com/AndyHMX/demos/blob/main/20.png?raw=true';
+        break;
+    default:
+       bg = 'https://github.com/AndyHMX/demos/blob/main/4.png?raw=true';
+}
+
+ 
+  $('#content').css('background-image', 'url("' + bg + '")');
+  
+});
+
+
+
+/**** slide number colors and states ****/
+
+/*
+$('#UIdark').change(function () {
+    if ($(!this).is(':checked')) {*/
+ 
+		
+
+function lightUIcolorsAndStates() {
+   
+$('#playerUI ul li button').click(function () {
+
+$('#playerUI ul li button').css('font-weight','400');
+  
+$('#playerUI ul li button').css('background','');
+  
+$('#playerUI ul li button').css('transition','');
+
+
+$('#playerUI ul li button').css('box-shadow','');
+  
+$('#playerUI ul li').removeClass('active');
+
+
+	
+	
+  $(this).parent().addClass('active');
+  $(this).css('box-shadow','none');
+	
+	
+  $('#infinateSteps').css('color','#333');
+$('#infinateSteps').css('background','transparent');
+$('#infinateSteps').css('border','1px solid #333');
+	
+	$('#infinateSteps').prop('selectedIndex',0);
+
+});
+	
+
+
+
+	
+
+	
+	
+	
+ 
+}
+		
+
+  
+
+  lightUIcolorsAndStates();
+		
+		
+  /***** move to next step on switchStepBtn press *****/  
+
+$('#previous').click(function () {
+
+
+$( "li.active" ).prev().addClass( "active" );
+$( "li.active" ).next().removeClass( "active" );
+	
+
+});
+		
+$('#next').click(function () {
+
+
+$( "li.active" ).next().addClass( "active" );
+$( "li.active" ).prev().removeClass( "active" );
+	
+
+});
+		
+		
+</script>
+	
